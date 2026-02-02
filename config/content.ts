@@ -1,14 +1,32 @@
 import { theme } from "./theme";
 
+type AnimatedBackgroundOrb = {
+  position: string;
+  size: string;
+  blur: string;
+  color: string;
+  opacity: number;
+  parallax: number;
+  animation?: boolean;
+};
+
+type AnimatedBackgroundConfig = {
+  enabled: boolean;
+  orbs: AnimatedBackgroundOrb[];
+  backgroundGradient: string;
+  backgroundOpacity: number;
+  mouseParallax: boolean;
+};
+
 export const content = {
   // 🎨 Configuração dos Fundos Animados
   animatedBackground: {
     enabled: false,  // Desabilitado completamente
-    orbs: [],
+    orbs: [] as AnimatedBackgroundOrb[],
     backgroundGradient: theme.animatedBackground.backgroundGradient,
     backgroundOpacity: 1,
     mouseParallax: false,
-  },
+  } satisfies AnimatedBackgroundConfig,
 
   navbar: {
   brand: "AutoCenter Pro",
