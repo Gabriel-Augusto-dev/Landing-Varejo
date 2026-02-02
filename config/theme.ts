@@ -9,13 +9,13 @@ export const theme = {
   // ===== CORES PRINCIPAIS =====
 colors: {
   // Cor primária (usado em títulos, destaques principais)
-  primary: "59 130 246",        // Blue-500 (Azul tecnológico profissional)
+  primary: "96 165 250",        // Blue-400 (Azul muito brilhante)
   
   // Cor secundária (usado em botões CTA, links, badges)
-  secondary: "14 165 233",      // Sky-500 (Azul céu vibrante)
+  secondary: "255 255 255",     // Branco puro para tags
   
   // Cor de destaque/acento (warnings, notificações)
-  accent: "99 102 241",         // Indigo-500 (Roxo-azulado destaque)
+  accent: "191 219 254",        // Blue-200 (Azul quase branco)
   
   // Cor de sucesso (mensagens positivas, confirmações)
   success: "34 197 94",         // Green-500 (Verde sucesso)
@@ -30,91 +30,91 @@ colors: {
 // ===== CORES DE BACKGROUND =====
 backgrounds: {
   // Background principal da página
-  main: "15 23 42",             // Slate-900 (Cinza azulado profundo)
+  main: "10 15 25",             // Azul escuro profundo
   
   // Background de cards e superfícies elevadas
-  card: "30 41 59",             // Slate-800 (Cinza azulado cards)
+  card: "30 45 70",             // Azul médio com muito mais contraste
   
   // Background de elementos hover
-  hover: "51 65 85",            // Slate-700 (Cinza hover)
+  hover: "40 60 95",            // Azul hover visível
   
   // Background de seções alternadas
-  alternate: "17 24 39",        // Slate-900 (Cinza profundo alternado)
+  alternate: "15 22 35",        // Azul escuro alternado
   
   // Background claro (se precisar de seções claras)
-  light: "45 55 72",            // Cinza azulado claro
+  light: "50 70 110",           // Azul médio claro
 },
 
 // ===== CORES DE TEXTO =====
 text: {
   // Texto principal (títulos, corpo)
-  primary: "248 250 252",       // Branco puro
+  primary: "255 255 255",       // Branco puro para máximo contraste
   
   // Texto secundário (subtítulos, descrições)
-  secondary: "226 232 240",     // Cinza claro brilhante
+  secondary: "226 232 240",     // Slate-200 (Cinza muito claro)
   
   // Texto terciário (labels, metadados)
-  tertiary: "148 163 184",      // Cinza médio visível
+  tertiary: "203 213 225",      // Slate-300 (Cinza claro bem visível)
   
   // Texto muted (texto desabilitado, menos importante)
-  muted: "100 116 139",         // Cinza com contraste
+  muted: "148 163 184",         // Slate-400 (Cinza médio visível)
   
   // Texto invertido (para backgrounds claros)
-  inverted: "23 15 15",         // Cinza escuro avermelhado
+  inverted: "15 23 42",         // Slate-900 (Azul escuro)
 },
 
 
 // ===== CORES DE BORDAS =====
 borders: {
   // Borda padrão (divisores, cards)
-  default: "71 85 105",         // Slate-600 (Cinza neutro)
+  default: "60 85 130",         // Azul médio bem visível
   
   // Borda clara (hover, destaque)
-  light: "100 116 139",         // Slate-500 (Cinza claro)
+  light: "80 110 170",          // Azul claro bem visível
   
   // Borda escura (sombras, profundidade)
-  dark: "51 65 85",             // Slate-700 (Cinza escuro)
+  dark: "40 60 95",             // Azul escuro com contraste
   
   // Borda de foco (inputs, elementos interativos)
-  focus: "59 130 246",          // Blue-500 (Azul primário)
+  focus: "59 130 246",          // Blue-500 (Azul brilhante)
 },
 
 // ===== GRADIENTES =====
 gradients: {
   // Gradiente primário (hero, CTAs)
-  primary: "linear-gradient(135deg, rgb(59 130 246) 0%, rgb(37 99 235) 100%)",
+  primary: "linear-gradient(135deg, rgb(15 45 90) 0%, rgb(30 100 200) 100%)",
   
   // Gradiente secundário (cards, destaques)
-  secondary: "linear-gradient(135deg, rgb(14 165 233) 0%, rgb(59 130 246) 100%)",
+  secondary: "linear-gradient(135deg, rgb(30 100 200) 0%, rgb(59 130 246) 100%)",
   
   // Gradiente de destaque
-  accent: "linear-gradient(135deg, rgb(99 102 241) 0%, rgb(59 130 246) 100%)",
+  accent: "linear-gradient(135deg, rgb(59 130 246) 0%, rgb(30 100 200) 100%)",
   
   // Gradiente de background
-  background: "linear-gradient(135deg, rgb(15 23 42) 0%, rgb(30 41 59) 50%, rgb(51 65 85) 100%)",
+  background: "linear-gradient(135deg, rgb(10 15 25) 0%, rgb(20 28 42) 50%, rgb(30 42 63) 100%)",
 },
 
 // ===== FUNDO ANIMADO (Canvas + Orbs) =====
 animatedBackground: {
   // Cor do grid animado (formato RGB para canvas)
-  gridColor: "59, 130, 246",         // Azul tecnológico
-  gridOpacity: 0.08,
+  gridColor: "30, 100, 200",         // Azul profissional
+  gridOpacity: 0.02,  // Muito mais discreto
   
   // Cor das partículas (formato RGB para canvas)
-  particleColor: "14, 165, 233",     // Azul céu
-  particleOpacity: 0.5,
+  particleColor: "59, 130, 246",     // Azul céu
+  particleOpacity: 0.15,  // Reduzido para ser mais sutil
   
   // Cor das linhas de conexão entre partículas
-  connectionColor: "59, 130, 246",   // Azul tecnológico
-  connectionOpacity: 0.15,
+  connectionColor: "30, 100, 200",   // Azul profissional
+  connectionOpacity: 0.05,  // Muito mais discreto
   
   // Cores dos orbs (formato hexadecimal)
-  orb1Color: "#3b82f6",              // Blue-500
-  orb2Color: "#0ea5e9",              // Sky-500
-  orbCenterGradient: "linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%)",
+  orb1Color: "#0f2d5a",              // Navy-900
+  orb2Color: "#1e64c8",              // Blue-600
+  orbCenterGradient: "linear-gradient(135deg, #0f2d5a 0%, #1e64c8 100%)",
   
   // Gradiente de fundo base
-  backgroundGradient: "linear-gradient(135deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 50%, rgb(15, 23, 42) 100%)",
+  backgroundGradient: "linear-gradient(135deg, rgb(10, 15, 25) 0%, rgb(20, 28, 42) 50%, rgb(10, 15, 25) 100%)",
 },
 
 
@@ -181,10 +181,9 @@ shadows: {
   lg: "0 10px 15px -3px rgb(0 0 0 / 0.1)",
   xl: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
   "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
-  glow: "0 0 30px rgb(239 68 68 / 0.3)",        // Glow vermelho (secondary)
-  glowPrimary: "0 0 30px rgb(220 38 38 / 0.3)", // Glow vermelho (primary)
+  glow: "0 0 30px rgb(30 100 200 / 0.3)",        // Glow azul
+  glowPrimary: "0 0 30px rgb(59 130 246 / 0.3)", // Glow azul primário
 },
-
 
 // ===== ANIMAÇÕES =====
 animations: {
@@ -201,62 +200,11 @@ animations: {
   },
 },
 
-  // ===== OPACIDADES =====
-  opacity: {
-    disabled: "0.5",
-    hover: "0.8",
-    active: "0.9",
-  },
+// ===== OPACIDADES =====
+opacity: {
+  disabled: "0.5",
+  hover: "0.8",
+  active: "0.9",
+},
 };
-
-// ===== EXEMPLO DE TEMAS PRONTOS =====
-// Descomente um desses para testar cores diferentes!
-
-// TEMA AZUL/VERDE (padrão)
-// Já está ativo acima
-
-// TEMA VERMELHO/LARANJA
-/*
-export const theme = {
-  colors: {
-    primary: "220 38 38",        // Vermelho
-    secondary: "234 88 12",      // Laranja
-    accent: "251 191 36",        // Amarelo
-    success: "22 163 74",
-    warning: "234 179 8",
-    error: "153 27 27",
-  },
-  // ... resto igual
-};
-*/
-
-// TEMA ROXO/ROSA
-/*
-export const theme = {
-  colors: {
-    primary: "147 51 234",       // Roxo
-    secondary: "236 72 153",     // Rosa
-    accent: "244 114 182",       // Rosa claro
-    success: "22 163 74",
-    warning: "234 179 8",
-    error: "220 38 38",
-  },
-  // ... resto igual
-};
-*/
-
-// TEMA VERDE/AZUL
-/*
-export const theme = {
-  colors: {
-    primary: "5 150 105",        // Verde
-    secondary: "14 165 233",     // Azul claro
-    accent: "34 211 238",        // Ciano
-    success: "22 163 74",
-    warning: "234 179 8",
-    error: "220 38 38",
-  },
-  // ... resto igual
-};
-*/
 

@@ -1,39 +1,39 @@
-@import "tailwindcss";
+@import "tailwindcss" layer(base);
 
 @layer base {
   :root {
     /* ===== CORES PRINCIPAIS (theme.colors) ===== */
-    --primary: 59 130 246;
-    --secondary: 14 165 233;
-    --accent: 99 102 241;
+    --primary: 96 165 250;
+    --secondary: 255 255 255;
+    --accent: 191 219 254;
     --success: 34 197 94;
     --warning: 251 191 36;
     --error: 239 68 68;
     
     /* ===== BACKGROUNDS (theme.backgrounds) ===== */
-    --bg-main: 15 23 42;
-    --bg-card: 30 41 59;
-    --bg-hover: 51 65 85;
-    --bg-alternate: 17 24 39;
-    --bg-light: 45 55 72;
+    --bg-main: 10 15 25;
+    --bg-card: 30 45 70;
+    --bg-hover: 40 60 95;
+    --bg-alternate: 15 22 35;
+    --bg-light: 50 70 110;
     
     /* ===== TEXTOS (theme.text) ===== */
-    --text-primary: 248 250 252;
+    --text-primary: 255 255 255;
     --text-secondary: 226 232 240;
-    --text-tertiary: 148 163 184;
-    --text-muted: 100 116 139;
-    --text-inverted: 23 15 15;
+    --text-tertiary: 203 213 225;
+    --text-muted: 148 163 184;
+    --text-inverted: 15 23 42;
     
     /* ===== BORDAS (theme.borders) ===== */
-    --border-default: 71 85 105;
-    --border-light: 100 116 139;
-    --border-dark: 51 65 85;
+    --border-default: 60 85 130;
+    --border-light: 80 110 170;
+    --border-dark: 40 60 95;
     --border-focus: 59 130 246;
     
     /* ===== ALIASES PARA COMPATIBILIDADE ===== */
-    --bg: 15 23 42;
-    --bg-dark: 15 23 42;
-    --border: 71 85 105;
+    --bg: 10 15 25;
+    --bg-dark: 10 15 25;
+    --border: 60 85 130;
   }
 
   * {
