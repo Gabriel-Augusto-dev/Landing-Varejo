@@ -1,0 +1,56 @@
+████████████████████████████████████████████████████████
+█                                                      █
+█  🎨 GUIA RÁPIDO: ALTERAR CORES DA LANDING PAGE      █
+█                                                      █
+████████████████████████████████████████████████████████
+
+┌─────────────────────────────────────────────────────┐
+│ PASSO 1: Edite config/theme.ts                     │
+└─────────────────────────────────────────────────────┘
+
+  export const theme = {
+    colors: {
+      secondary: "16 185 129",  ← VERDE DOS BOTÕES
+      primary: "37 99 235",     ← AZUL DOS ACENTOS
+      error: "220 38 38",       ← VERMELHO DAS NOTIFICAÇÕES
+    }
+  }
+
+┌─────────────────────────────────────────────────────┐
+│ PASSO 2: Execute o comando                         │
+└─────────────────────────────────────────────────────┘
+
+  npm run sync-theme
+
+┌─────────────────────────────────────────────────────┐
+│ PASSO 3: Reinicie o servidor                       │
+└─────────────────────────────────────────────────────┘
+
+  Ctrl+C (para parar)
+  npm run dev (para iniciar novamente)
+
+████████████████████████████████████████████████████████
+
+🎯 ATALHOS DE CORES POPULARES:
+
+  Verde WhatsApp: "37 211 102"
+  Azul Facebook:  "24 119 242"
+  Roxo:           "147 51 234"
+  Laranja:        "249 115 22"
+  Rosa:           "236 72 153"
+  Vermelho:       "239 68 68"
+  Amarelo:        "234 179 8"
+
+████████████████████████████████████████████████████████
+
+⚠️ FORMATO IMPORTANTE:
+
+  ✅ Correto:  "37 99 235"  (espaços)
+  ❌ Errado:   "37,99,235"  (vírgulas)
+  ❌ Errado:   "#2563EB"    (hexadecimal)
+
+████████████████████████████████████████████████████████
+
+📖 Documentação completa: COMO_ALTERAR_CORES.md
+
+████████████████████████████████████████████████████████

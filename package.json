@@ -1,0 +1,30 @@
+{
+  "name": "landing-pages",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/sync-theme.js",
+    "dev": "next dev",
+    "prebuild": "node scripts/sync-theme.js",
+    "build": "next build",
+    "prestart": "node scripts/sync-theme.js",
+    "start": "next start",
+    "lint": "eslint",
+    "sync-theme": "node scripts/sync-theme.js"
+  },
+  "dependencies": {
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
