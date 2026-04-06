@@ -121,8 +121,6 @@ export default function Home() {
         {layouts.benefits === "withImage" && <BenefitsWithImage />}
         {layouts.benefits === "imageHero" && <BenefitsImageHero />}
         {layouts.benefits === "imageCards" && <BenefitsImageCards />}
-        {layouts.benefits === "imageCards" && <BenefitsImageCards />}
-        {layouts.benefits === "stacked" && <BenefitsStacked />}
       </div>
 
       {/* 5️⃣ COMO FUNCIONA - Remove dúvidas e atrito */}
