@@ -36,7 +36,6 @@ import {
   ServicesListImage,
   ServicesTabs,
   ServicesCarousel,
-  ServicesAccordion as ServicesAccordionNew,
   ServicesTwoCol,
   ServicesMinimal,
   ServicesMasonry,
@@ -50,6 +49,8 @@ import { TestimonialsCarousel, TestimonialsGrid, TestimonialsMasonry } from "@/c
 import { FaqAccordion, FaqGrid, FaqTabs } from "@/components/sections/faq";
 import { CtaSplit, CtaCentered, CtaBanner } from "@/components/sections/CTA";
 import { FooterMultiColumn, FooterCentered, FooterMinimal } from "@/components/sections/footer";
+import { Stats } from "@/components/sections/stats";
+import { ContactForm } from "@/components/sections/ContactForm";
 
 export default function Home() {
   return (
@@ -74,6 +75,8 @@ export default function Home() {
       {layouts.hero === "twoColBenefits" && <HeroTwoColBenefits />}
       {layouts.hero === "testimonial" && <HeroTestimonial />}
       {layouts.hero === "process" && <HeroProcess />}
+
+      <Stats />
 
       {/* 2️⃣ AUTORIDADE/PROVA - "Por que confiar em você?" */}
       {layouts.authority === "grid" && <AuthorityGrid />}
@@ -123,9 +126,11 @@ export default function Home() {
       </div>
 
       {/* 5️⃣ COMO FUNCIONA - Remove dúvidas e atrito */}
-      {layouts.process === "timeline" && <ProcessTimeline />}
-      {layouts.process === "steps" && <ProcessSteps />}
-      {layouts.process === "cards" && <ProcessCards />}
+      <div id="process">
+        {layouts.process === "timeline" && <ProcessTimeline />}
+        {layouts.process === "steps" && <ProcessSteps />}
+        {layouts.process === "cards" && <ProcessCards />}
+      </div>
 
       {/* 6️⃣ PROVA SOCIAL - Depoimentos, casos */}
       <div id="depoimentos">
@@ -141,10 +146,14 @@ export default function Home() {
         {layouts.cta === "banner" && <CtaBanner />}
       </div>
 
+      <ContactForm />
+
       {/* 8️⃣ FAQ - Remove objeções finais */}
-      {layouts.faq === "accordion" && <FaqAccordion />}
-      {layouts.faq === "grid" && <FaqGrid />}
-      {layouts.faq === "tabs" && <FaqTabs />}
+      <div id="faq">
+        {layouts.faq === "accordion" && <FaqAccordion />}
+        {layouts.faq === "grid" && <FaqGrid />}
+        {layouts.faq === "tabs" && <FaqTabs />}
+      </div>
 
       {layouts.footer === "multi-column" && <FooterMultiColumn />}
       {layouts.footer === "centered" && <FooterCentered />}

@@ -4,64 +4,31 @@ export function Logo({ className = "w-12 h-12" }: { className?: string }) {
       viewBox="0 0 100 100"
       className={className}
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
-      {/* Círculo externo com gradiente azul */}
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0f2d5a" />
-          <stop offset="100%" stopColor="#1e64c8" />
+        <linearGradient id="storeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#f97316" />
+          <stop offset="100%" stopColor="#f59e0b" />
         </linearGradient>
-        <linearGradient id="logoGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#3b82f6" />
-          <stop offset="100%" stopColor="#1e64c8" />
+        <linearGradient id="leafGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#fde68a" />
+          <stop offset="100%" stopColor="#fff7ed" />
         </linearGradient>
       </defs>
-      
-      {/* Círculo de fundo */}
-      <circle
-        cx="50"
-        cy="50"
-        r="45"
-        fill="url(#logoGradient)"
-        opacity="0.15"
-      />
-      
-      {/* Anel externo (roda) */}
-      <circle
-        cx="50"
-        cy="50"
-        r="38"
-        fill="none"
-        stroke="url(#logoGradient)"
-        strokeWidth="3"
-      />
-      
-      {/* Chave inglesa estilizada */}
+
+      <rect x="10" y="10" width="80" height="80" rx="28" fill="url(#storeGradient)" opacity="0.18" />
+      <rect x="18" y="18" width="64" height="64" rx="22" fill="none" stroke="url(#storeGradient)" strokeWidth="3.5" />
+
+      <path d="M27 34h46l-4 11H31l-4-11Z" fill="url(#storeGradient)" />
+      <path d="M31 45h38v25H31V45Z" fill="#0f172a" fillOpacity="0.42" stroke="url(#leafGradient)" strokeWidth="3" />
+      <path d="M37 34c0 5 3 8 7 8s7-3 7-8m0 0c0 5 3 8 7 8s7-3 7-8" stroke="#fff7ed" strokeWidth="3" strokeLinecap="round" />
+
       <path
-        d="M35,55 L45,45 L48,48 L52,44 L56,48 L59,45 L65,51 L62,54 L58,50 L54,54 L50,50 L47,53 L40,60 L35,55 Z"
-        fill="url(#logoGradient2)"
+        d="M50 61c8-1 13-7 13-14-7 0-13 5-13 12-1-7-6-12-13-12 0 8 5 13 13 14Z"
+        fill="url(#leafGradient)"
       />
-      
-      {/* Detalhes da chave */}
-      <circle
-        cx="62"
-        cy="48"
-        r="3"
-        fill="none"
-        stroke="url(#logoGradient2)"
-        strokeWidth="2"
-      />
-      
-      {/* Raios da roda (5 raios) */}
-      <line x1="50" y1="50" x2="50" y2="20" stroke="url(#logoGradient)" strokeWidth="2" opacity="0.6" />
-      <line x1="50" y1="50" x2="77" y2="35" stroke="url(#logoGradient)" strokeWidth="2" opacity="0.6" />
-      <line x1="50" y1="50" x2="77" y2="65" stroke="url(#logoGradient)" strokeWidth="2" opacity="0.6" />
-      <line x1="50" y1="50" x2="23" y2="65" stroke="url(#logoGradient)" strokeWidth="2" opacity="0.6" />
-      <line x1="50" y1="50" x2="23" y2="35" stroke="url(#logoGradient)" strokeWidth="2" opacity="0.6" />
-      
-      {/* Centro da roda */}
-      <circle cx="50" cy="50" r="6" fill="url(#logoGradient2)" />
-      <circle cx="50" cy="50" r="3" fill="#ffffff" opacity="0.3" />
+      <path d="M50 48v18" stroke="#7c2d12" strokeWidth="2.5" strokeLinecap="round" />
     </svg>
   );
 }

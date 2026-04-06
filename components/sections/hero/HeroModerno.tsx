@@ -1,6 +1,7 @@
 "use client";
 
 import { content } from "@/config/content";
+import { getWhatsAppUrl } from "@/lib/utils";
 import { Container } from "@/ui/Container";
 import { Button } from "@/ui/Button";
 import { MediaContainer } from "@/ui/MediaContainer";
@@ -51,19 +52,20 @@ export function HeroImage() {
             {content.hero.description}
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="shadow-2xl hover:shadow-theme-primary/50 transition-all"
-            >
-              {content.hero.cta}
-            </Button>
-            <Button size="lg" variant="outline">
-              Saiba Mais
-            </Button>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                href={getWhatsAppUrl()}
+                className="shadow-2xl hover:shadow-theme-primary/50 transition-all"
+              >
+                {content.hero.cta}
+              </Button>
+              <Button size="lg" variant="outline" href="#servicos">
+                {content.hero.ctaSecondary}
+              </Button>
+            </div>
           </div>
-        </div>
       </Container>
     </section>
   );
@@ -101,11 +103,11 @@ export function HeroImageSplit() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg">
+              <Button size="lg" href={getWhatsAppUrl()}>
                 {content.hero.cta}
               </Button>
-              <Button size="lg" variant="outline">
-                Saiba Mais
+              <Button size="lg" variant="outline" href="#servicos">
+                {content.hero.ctaSecondary}
               </Button>
             </div>
           </div>

@@ -4,13 +4,27 @@ import { content } from "@/config/content";
 import { getWhatsAppUrl } from "@/lib/utils";
 
 export function FooterMultiColumn() {
+  const linkHrefMap: Record<string, string> = {
+    "Hortifruti Selecionado": "#servicos",
+    "Padaria e Confeitaria": "#servicos",
+    "Acougue e Proteinas": "#servicos",
+    "Mercearia e Itens Especiais": "#servicos",
+    "Rotisseria": "#servicos",
+    "Pedidos pelo WhatsApp": getWhatsAppUrl(),
+    "Encomendas": "#contato",
+    "Entrega Local": "#contato",
+    "Fazer Pedido": getWhatsAppUrl(),
+    "Falar com a Loja": "#contato",
+    "Retirada e Delivery": "#contato",
+  };
+
   return (
     <footer className="bg-slate-900/50 border-t border-slate-800">
       <div className="container py-8 md:py-12 lg:py-16 px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12 mb-6 md:mb-8 lg:mb-12">
           <div>
             <h3 className="text-xl md:text-2xl font-bold mb-4 bg-linear-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-              SuaMarca
+              {content.navbar.brand}
             </h3>
             <p className="text-slate-400 mb-6 text-sm md:text-base">{content.footer.tagline}</p>
             <a
@@ -31,7 +45,9 @@ export function FooterMultiColumn() {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href={linkHrefMap[link] || "#hero"}
+                      target={linkHrefMap[link]?.startsWith("http") ? "_blank" : undefined}
+                      rel={linkHrefMap[link]?.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="text-slate-400 hover:text-green-400 transition-colors text-sm md:text-base"
                     >
                       {link}
@@ -61,7 +77,7 @@ export function FooterCentered() {
     <footer className="bg-slate-900/50 border-t border-slate-800">
       <div className="container py-12 md:py-16 px-6 text-center">
         <h3 className="text-xl md:text-2xl font-bold mb-4 bg-linear-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-          SuaMarca
+          {content.navbar.brand}
         </h3>
         <p className="text-slate-400 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base">{content.footer.tagline}</p>
 
@@ -94,7 +110,7 @@ export function FooterMinimal() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <h3 className="text-lg md:text-xl font-bold bg-linear-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-              SuaMarca
+              {content.navbar.brand}
             </h3>
             <p className="text-slate-400 text-xs md:text-sm hidden md:block">{content.footer.copyright}</p>
           </div>
@@ -120,11 +136,15 @@ export function FooterMinimal() {
 }
 
 function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
+  if (href === "#") {
+    return <span className="text-slate-500 cursor-default">{icon}</span>;
+  }
+
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
       className="text-slate-400 hover:text-green-400 transition-colors"
     >
       {icon}

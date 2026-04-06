@@ -4,7 +4,6 @@ import { content } from "@/config/content";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { Container } from "@/ui/Container";
 import { Button } from "@/ui/Button";
-import { MediaContainer, useMediaUrl } from "@/ui/MediaContainer";
 import {
   WhatsAppIcon,
   SparklesIcon,
@@ -43,7 +42,7 @@ export function HeroGradient() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-xs sm:text-sm font-medium backdrop-blur-sm">
               <SparklesIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>Especialistas em Climatização</span>
+              <span>{content.hero.badge}</span>
             </div>
 
             {/* Title */}

@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import { content } from "@/config/content";
 
 export function generateMetadata(): Metadata {
-  const title = `${content.navbar.brand} - Serviços Profissionais de Qualidade`;
-  const description = content.hero.description || "Serviços profissionais de alta qualidade com atendimento personalizado e garantia.";
+  const title = `${content.navbar.brand} | Mercado de Bairro com Produtos Frescos`;
+  const description =
+    content.hero.description ||
+    "Mercado alimenticio com hortifruti, padaria, acougue, mercearia especial e pedidos pelo WhatsApp.";
   const url = process.env.NEXT_PUBLIC_SITE_URL || "https://landing-page-demo.vercel.app";
   const ogImage = process.env.NEXT_PUBLIC_OG_IMAGE || `${url}/og-image.jpg`;
 
@@ -12,13 +14,16 @@ export function generateMetadata(): Metadata {
     description,
     keywords: [
       content.navbar.brand,
-      "serviços profissionais",
-      "atendimento personalizado",
-      "garantia",
-      "qualidade",
+      "mercado",
+      "emporio",
+      "hortifruti",
+      "padaria",
+      "acougue",
+      "delivery local",
+      "varejo alimenticio",
     ],
-    authors: [{ name: "AutoCenter Prime" }],
-    creator: "AutoCenter Prime",
+    authors: [{ name: content.navbar.brand }],
+    creator: content.navbar.brand,
     metadataBase: new URL(url),
     alternates: {
       canonical: url,

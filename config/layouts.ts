@@ -65,7 +65,7 @@ export const layouts = {
   // │ "compact"            │ 🆕 Cards compactos + logos parceiros │
   // │ "banner"             │ 🆕 Banner full width com ícones      │
   // └──────────────────────┴──────────────────────────────────────┘
-  authority: "imageBg",
+  authority: "splitStats",
   
   // ========================================
   // 3️⃣ SERVIÇOS/SOLUÇÃO - O que exatamente você faz
@@ -119,7 +119,7 @@ export const layouts = {
   // │ "imageCards"    │ 🆕 MODERNO - Imagem sticky + cards lado,  │
   // │                 │ layout split responsivo, elegante         │
   // └─────────────────┴────────────────────────────────────────────┘
-  benefits: "imageHero",
+  benefits: "imageCards",
   
   // ========================================
   // 5️⃣ COMO FUNCIONA - Remove dúvidas e atrito
@@ -139,7 +139,7 @@ export const layouts = {
   // │ "cards"     │ Grid de cards numerados, clean e        │
   // │             │ corporativo, fácil de escanear          │
   // └─────────────┴──────────────────────────────────────────┘
-  process: "cards",
+  process: "timeline",
   
   // ========================================
   // 6️⃣ PROVA SOCIAL - Depoimentos, casos
@@ -177,7 +177,7 @@ export const layouts = {
   // │ "banner"    │ Banner horizontal verde chamativo,      │
   // │             │ urgência visual, alto contraste         │
   // └─────────────┴──────────────────────────────────────────┘
-  cta: "banner",
+  cta: "split",
   
   // ========================================
   // 8️⃣ FAQ - Remove objeções finais
@@ -196,7 +196,7 @@ export const layouts = {
   // │ "tabs"      │ Menu lateral com perguntas + conteúdo   │
   // │             │ à direita, layout mais sofisticado      │
   // └─────────────┴──────────────────────────────────────────┘
-  faq: "grid",
+  faq: "accordion",
   
   // ========================================
   // 📄 FOOTER - Rodapé

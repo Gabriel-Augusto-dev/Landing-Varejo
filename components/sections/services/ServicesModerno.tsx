@@ -18,7 +18,7 @@ export function ServicesWithGallery() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-slate-700 mb-4">
             <span className="text-lg">📸</span>
             <span className="text-sm font-medium text-slate-300">
-              Conheça nossos serviços
+              Conheca nossos setores
             </span>
           </div>
 
@@ -85,7 +85,7 @@ export function ServicesWithGallery() {
                 {content.services.gallery.title}
               </h3>
               <p className="text-slate-400">
-                Veja nossos serviços em ação com imagens e vídeos
+                Veja o cuidado em cada setor da loja e na forma como atendemos voce
               </p>
             </div>
 

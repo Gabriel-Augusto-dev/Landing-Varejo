@@ -19,9 +19,8 @@ type AnimatedBackgroundConfig = {
 };
 
 export const content = {
-  // 🎨 Configuração dos Fundos Animados
   animatedBackground: {
-    enabled: false,  // Desabilitado completamente
+    enabled: false,
     orbs: [] as AnimatedBackgroundOrb[],
     backgroundGradient: theme.animatedBackground.backgroundGradient,
     backgroundOpacity: 1,
@@ -29,385 +28,440 @@ export const content = {
   } satisfies AnimatedBackgroundConfig,
 
   navbar: {
-  brand: "AutoCenter Pro",
-  links: ["Serviços", "Especialidade", "Clientes", "Contato"],
-  ctaText: "Agendar Revisão",
-},
-
-whatsapp: {
-  number: "5511999999999",
-  message: "Olá! Gostaria de agendar uma revisão ou manutenção do meu veículo.",
-},
-
-authority: {
-  title: "Por que escolher AutoCenter Pro?",
-  subtitle: "Qualidade, confiabilidade e cuidado excepcional para seu veículo",
-  featuredMedia: {
-    type: "image" as const,
-    src: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1200&h=800&fit=crop&q=80",
-    alt: "Mecânico profissional da AutoCenter",
-    title: "Profissionais especializados e certificados",
+    brand: "Emporio Sabor da Vila",
+    links: ["Setores", "Diferenciais", "Avaliações", "Contato"],
+    ctaText: "Pedir no WhatsApp",
   },
-  badges: [
-    {
-      icon: "🔧",
-      title: "20 Anos",
-      description: "de experiência em manutenção automotiva de qualidade",
-    },
-    {
-      icon: "⭐",
-      title: "4.9 de 5.0",
-      description: "+2000 veículos atendidos com excelência",
-    },
-    {
-      icon: "🛡️",
-      title: "Certificado",
-      description: "Autorizado e certificado pelas principais marcas",
-    },
-    {
-      icon: "🏆",
-      title: "Garantia",
-      description: "Todos os serviços com garantia de 12 meses",
-    },
-  ],
-  partnersLabel: "Parceiros e marcas que confiamos",
-  partners: ["Chevrolet", "Ford", "Volkswagen", "Fiat", "Toyota", "Hyundai"],
-},
 
+  whatsapp: {
+    number: "5511999999999",
+    message: "Olá! Quero fazer um pedido no Emporio Sabor da Vila.",
+  },
 
-  services: {
-  title: "Nossos Serviços Automotivos",
-  subtitle: "Manutenção, revisão e reparos com excelência",
-  gallery: {
-    title: "Trabalhos realizados",
-    items: [
+  authority: {
+    title: "Mais do que mercado, um lugar para comprar bem todos os dias",
+    subtitle:
+      "Selecionamos produtos com cuidado, mantemos frescor diário e oferecemos um atendimento próximo para deixar sua rotina mais prática.",
+    featuredMedia: {
+      type: "image" as const,
+      src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=900&fit=crop&q=80",
+      alt: "Interior de um mercado organizado com produtos frescos e atendimento acolhedor",
+      title: "Qualidade, cuidado e praticidade em um so lugar",
+    },
+    badges: [
       {
-        type: "image" as const,
-        src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&h=600&fit=crop&q=80",
-        alt: "Manutenção de motor",
-        title: "Manutenção de Motor",
+        icon: "🥬",
+        title: "Frescor diario",
+        description: "hortifruti selecionado todos os dias para sua casa e sua rotina",
       },
       {
-        type: "image" as const,
-        src: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=600&h=600&fit=crop&q=80",
-        alt: "Reparo de freios",
-        title: "Sistema de Freios",
+        icon: "🥖",
+        title: "Producao artesanal",
+        description: "padaria e rotisseria com sabor de feito na hora e cara de comida de verdade",
       },
       {
-        type: "image" as const,
-        src: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=600&h=600&fit=crop&q=80",
-        alt: "Suspensão e pneus",
-        title: "Suspensão e Pneus",
+        icon: "🚚",
+        title: "Pedido facil",
+        description: "atendimento rapido pelo WhatsApp para encomendas, reservas e delivery local",
+      },
+      {
+        icon: "❤️",
+        title: "Atendimento de bairro",
+        description: "uma equipe que conhece os clientes pelo nome e ajuda a encontrar o que voce precisa",
       },
     ],
+    partnersLabel: "O que voce encontra por aqui",
+    partners: ["Hortifruti", "Padaria", "Acougue", "Adega", "Mercearia", "Rotisseria"],
   },
-  items: [
-    {
-      icon: "🔧",
-      tag: "Popular",
-      title: "Revisão Completa",
-      description: "Checklist completo de manutenção preventiva para seu veículo.",
-      features: [
-        "Troca de óleo e filtros",
-        "Verificação de fluidos",
-        "Inspeção de freios",
-        "Relatório detalhado",
+
+  services: {
+    title: "Setores pensados para facilitar sua rotina com qualidade de verdade",
+    subtitle:
+      "Tudo o que voce precisa em um unico estabelecimento, com curadoria, produtos frescos e atendimento rapido para compras do dia a dia ou encomendas especiais.",
+    gallery: {
+      title: "Um mercado acolhedor, completo e preparado para atender bem",
+      items: [
+        {
+          type: "image" as const,
+          src: "https://images.unsplash.com/photo-1579113800032-c38bd7635818?w=700&h=700&fit=crop&q=80",
+          alt: "Setor de frutas e verduras organizado",
+          title: "Hortifruti fresco todos os dias",
+        },
+        {
+          type: "image" as const,
+          src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&h=700&fit=crop&q=80",
+          alt: "Padaria com paes artesanais recem assados",
+          title: "Padaria com fornadas ao longo do dia",
+        },
+        {
+          type: "image" as const,
+          src: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=700&h=700&fit=crop&q=80",
+          alt: "Balcao de cortes especiais e carnes",
+          title: "Carnes selecionadas e cortes especiais",
+        },
+        {
+          type: "image" as const,
+          src: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=700&h=700&fit=crop&q=80",
+          alt: "Cestas e itens gourmet para presente",
+          title: "Cestas, presentes e encomendas especiais",
+        },
       ],
     },
-    {
-      icon: "⚙️",
-      tag: "Motor",
-      title: "Reparo de Motor",
-      description: "Conserto e restauração do motor com peças originais.",
-      features: [
-        "Diagnóstico eletrônico",
-        "Peças originais garantidas",
-        "Mão de obra especializada",
-        "Garantia de 12 meses",
-      ],
-    },
-    {
-      icon: "🛑",
-      tag: "Segurança",
-      title: "Sistema de Freios",
-      description: "Manutenção e reparação do sistema de freios.",
-      features: [
-        "Pastilhas e discos",
-        "Fluído de freio",
-        "Cilindro mestre",
-        "Teste de segurança",
-      ],
-    },
-    {
-      icon: "🛞",
-      tag: "Pneus",
-      title: "Pneus e Rodas",
-      description: "Balanceamento, alinhamento e troca de pneus.",
-      features: [
-        "Balanceamento dinâmico",
-        "Alinhamento computadorizado",
-        "Troca de pneus",
-        "Borracharia completa",
-      ],
-    },
-    {
-      icon: "🔋",
-      tag: "Elétrico",
-      title: "Sistema Elétrico",
-      description: "Reparo de bateria, alternador e sistema elétrico.",
-      features: [
-        "Diagnóstico elétrico",
-        "Troca de bateria",
-        "Alternador revisado",
-        "Fiação e conectores",
-      ],
-    },
-    {
-      icon: "🏠",
-      tag: "Serviço",
-      title: "Atendimento Domiciliar",
-      description: "Pequenos reparos e manutenção em sua casa ou no local de trabalho.",
-      features: [
-        "Assistência rápida",
-        "Equipamento móvel",
-        "Orçamento no local",
-        "Atendimento ágil",
-      ],
-    },
-  ],
+    items: [
+      {
+        icon: "🥗",
+        tag: "Frescos",
+        title: "Hortifruti Selecionado",
+        description:
+          "Frutas, legumes e verduras escolhidos com cuidado para garantir qualidade, sabor e boa apresentacao.",
+        features: [
+          "Reposicao diaria",
+          "Produtos frescos e sazonais",
+          "Opcoes para a semana toda",
+          "Selecao visual rigorosa",
+        ],
+      },
+      {
+        icon: "🥖",
+        tag: "Padaria",
+        title: "Padaria e Confeitaria",
+        description:
+          "Paes, bolos, doces e itens para cafe da manha produzidos com sabor caseiro e alta rotatividade.",
+        features: [
+          "Paes recem assados",
+          "Doces e sobremesas",
+          "Itens para cafe especial",
+          "Encomendas para eventos",
+        ],
+      },
+      {
+        icon: "🥩",
+        tag: "Acougue",
+        title: "Acougue e Proteinas",
+        description:
+          "Carnes frescas, aves, suinos e cortes especiais para o dia a dia, churrasco ou ocasioes especiais.",
+        features: [
+          "Cortes selecionados",
+          "Atendimento no balcao",
+          "Sugestoes para preparo",
+          "Reservas e encomendas",
+        ],
+      },
+      {
+        icon: "🧀",
+        tag: "Emporio",
+        title: "Mercearia e Itens Especiais",
+        description:
+          "Uma curadoria equilibrada entre itens do dia a dia, gourmet, importados e produtos para montar a despensa completa.",
+        features: [
+          "Massas, molhos e conservas",
+          "Queijos e frios especiais",
+          "Adega e bebidas",
+          "Produtos premium e presentes",
+        ],
+      },
+      {
+        icon: "🍲",
+        tag: "Praticidade",
+        title: "Rotisseria e Prontos para Levar",
+        description:
+          "Opcoes praticas para almoco, jantar e refeicoes rapidas com cara de comida feita em casa.",
+        features: [
+          "Refeicoes prontas",
+          "Acompanhamentos variados",
+          "Opcoes para a correria do dia",
+          "Menu com rotacao constante",
+        ],
+      },
+      {
+        icon: "📲",
+        tag: "Facilidade",
+        title: "Pedidos, Encomendas e Delivery",
+        description:
+          "Atendimento direto para separar compras, montar cestas, reservar produtos e agilizar sua rotina.",
+        features: [
+          "Pedidos pelo WhatsApp",
+          "Encomendas especiais",
+          "Retirada na loja",
+          "Entrega local rapida",
+        ],
+      },
+    ],
   },
 
   stats: {
     items: [
-      { number: "20+", label: "Anos", description: "de experiência no mercado automotivo" },
-      { number: "2.000+", label: "Veículos", description: "atendidos com qualidade" },
-      { number: "98%", label: "Satisfação", description: "dos clientes garantida" },
-      { number: "12h", label: "Revisão", description: "media completa de um carro" },
+      { number: "15 anos", label: "de historia", description: "atendendo o bairro com qualidade e proximidade" },
+      { number: "1.200+", label: "itens", description: "selecionados entre basicos, especiais e produtos frescos" },
+      { number: "4.9/5", label: "avaliacao", description: "em atendimento, variedade e qualidade dos produtos" },
+      { number: "45 min", label: "entrega local", description: "para pedidos confirmados na regiao de atendimento" },
     ],
   },
 
   process: {
-    title: "Como Funciona o Atendimento",
-    subtitle: "Processo organizado, transparente e eficiente",
+    title: "Como funciona seu pedido com a nossa loja",
+    subtitle:
+      "Um atendimento simples, rapido e humano para voce comprar com tranquilidade, retirar ou receber em casa.",
     steps: [
       {
-        title: "Agendamento",
-        description: "Agende sua revisão pelo WhatsApp ou telefone. Horários flexíveis incluindo sábados.",
+        title: "Escolha o que voce precisa",
+        description:
+          "Passe na loja ou envie sua lista pelo WhatsApp com os itens, quantidades e preferencias de compra.",
       },
       {
-        title: "Inspeção Visual",
-        description: "Nossos mecânicos fazem uma inspeção completa de seu veículo.",
+        title: "Falamos com voce rapidinho",
+        description:
+          "Nossa equipe confirma disponibilidade, sugere substituicoes quando necessario e organiza tudo com agilidade.",
       },
       {
-        title: "Diagnóstico",
-        description: "Executamos testes e diagnósticos para identificar qualquer problema.",
+        title: "Separamos com cuidado",
+        description:
+          "Selecionamos os produtos com o mesmo criterio de quem compra para a propria casa, priorizando frescor e qualidade.",
       },
       {
-        title: "Orçamento",
-        description: "Você recebe um orçamento claro e transparente antes de qualquer reparo.",
+        title: "Pagamento simples",
+        description:
+          "Combinamos a melhor forma de pagamento e deixamos tudo alinhado para retirada ou entrega.",
       },
       {
-        title: "Execução",
-        description: "Com sua aprovação, iniciamos o serviço com profissionalismo total.",
+        title: "Retire ou receba",
+        description:
+          "Voce escolhe se prefere buscar na loja ou receber em casa dentro da nossa area de atendimento.",
       },
       {
-        title: "Entrega",
-        description: "Seu veículo entregue em perfeito estado de funcionamento com nota fiscal.",
+        title: "Volte sempre",
+        description:
+          "Mantemos um atendimento proximo para suas compras da semana, encomendas especiais e datas comemorativas.",
       },
     ],
   },
 
   hero: {
-    badge: "AutoCenter Pro - Qualidade Garantida",
-    title: "Seu Veículo em Mãos Especialistas",
-    subtitle: "Manutenção completa, reparos confiáveis e atendimento de primeira qualidade",
-    description: "Centro automotivo de excelência com mais de 20 anos de experiência. Manutenção preventiva, reparos especializados e serviços completos para todos os modelos.",
-    cta: "Agendar Revisão",
-    ctaSecondary: "Falar no WhatsApp",
+    badge: "Mercado de bairro com cuidado, frescor e atendimento proximo",
+    title: "Seu varejo alimenticio de confianca para comprar bem todos os dias",
+    subtitle:
+      "Hortifruti, padaria, acougue, mercearia especial e pedidos pelo WhatsApp em um unico estabelecimento.",
+    description:
+      "No Emporio Sabor da Vila voce encontra qualidade de verdade, selecao cuidadosa e praticidade para a rotina da casa, do cafe da manha ao jantar especial.",
+    cta: "Fazer pedido agora",
+    ctaSecondary: "Conhecer setores",
     media: {
       type: "image" as const,
-      src: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&h=800&fit=crop&q=80",
-      alt: "Mecânico especializado trabalhando",
+      src: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=900&fit=crop&q=80",
+      alt: "Mercado alimenticio moderno com produtos frescos e ambiente acolhedor",
     },
   },
 
   features: {
-    title: "Por que escolher AutoCenter Pro?",
-    subtitle: "Qualidade, experiência e compromisso com seus resultados",
+    title: "Por que os clientes escolhem o Emporio Sabor da Vila",
+    subtitle: "Um estabelecimento unico, completo e feito para unir praticidade com qualidade em cada compra.",
     items: [
       {
-        title: "Mecânicos Certificados",
-        description: "Profissionais com certificações oficiais das marcas automotivas principais",
+        title: "Produtos sempre bem escolhidos",
+        description: "A selecao da loja prioriza frescor, apresentacao e qualidade para a compra do dia a dia.",
       },
       {
-        title: "Diagnóstico Computadorizado",
-        description: "Equipamentos de diagnóstico de última geração para máxima precisão",
+        title: "Atendimento que realmente ajuda",
+        description: "Nossa equipe orienta, separa pedidos e facilita encomendas com atencao de verdade.",
       },
       {
-        title: "Serviço Rápido",
-        description: "Agilidade no atendimento sem comprometer a qualidade dos trabalhos",
+        title: "Variedade em um so lugar",
+        description: "Voce resolve a compra completa da semana sem precisar passar por varios lugares.",
       },
       {
-        title: "Garantia Completa",
-        description: "Todos os serviços com garantia de 12 meses contra defeitos",
+        title: "Padaria e rotisseria com giro alto",
+        description: "Itens preparados com frequencia para manter sabor, textura e aparencia sempre convidativos.",
       },
       {
-        title: "Peças Originais",
-        description: "Utilizamos exclusivamente peças originais das melhores marcas",
+        title: "Comodidade no WhatsApp",
+        description: "Voce pode pedir, reservar e tirar duvidas sem complicacao e com resposta rapida.",
       },
       {
-        title: "Preço Justo",
-        description: "Orçamentos honestos, sem surpresas e com excelente custo-benefício",
+        title: "Experiencia acolhedora",
+        description: "Uma loja com cara de bairro, organizada, limpa e preparada para receber bem todos os perfis de cliente.",
       },
     ],
   },
 
   benefits: {
-    title: "O que você ganha ao confiar em nós",
-    subtitle: "Resultados reais que fazem diferença na vida do seu veículo",
-    featuredImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=600&fit=crop&q=80",
+    title: "Tudo o que faz a compra ficar mais gostosa, pratica e confiavel",
+    subtitle:
+      "Mais do que abastecer a despensa, queremos facilitar sua rotina e deixar a experiencia de compra sempre boa do comeco ao fim.",
+    featuredImage:
+      "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=800&fit=crop&q=80",
     items: [
       {
-        icon: "⚡",
-        tag: "Performance",
-        title: "Veículo mais rápido",
-        description: "Otimização completa do motor para máxima performance e eficiência.",
-        highlight: "+25%",
-        metric: "mais rápido",
+        icon: "🌿",
+        tag: "Frescor",
+        title: "Produtos com melhor qualidade na sua mesa",
+        description: "Voce leva para casa frutas, verduras, paes e itens frescos escolhidos com mais criterio.",
+        highlight: "Diario",
+        metric: "reposicao constante nas categorias frescas",
       },
       {
-        icon: "💰",
-        tag: "Economia",
-        title: "Economize combustível",
-        description: "Manutenção preventiva reduz consumo e evita gastos inesperados.",
-        highlight: "-20%",
-        metric: "consumo",
+        icon: "⏱️",
+        tag: "Praticidade",
+        title: "Compra resolvida com menos tempo",
+        description: "Com setores completos e pedido por mensagem, sua rotina fica muito mais leve.",
+        highlight: "1 lugar",
+        metric: "para resolver compras do dia a dia e ocasioes especiais",
       },
       {
-        icon: "🛡️",
-        tag: "Segurança",
-        title: "Máxima Segurança",
-        description: "Sistema de freios, direção e suspensão otimizados para sua proteção.",
-        highlight: "100%",
-        metric: "segurança",
+        icon: "💬",
+        tag: "Atendimento",
+        title: "Atendimento que conhece voce",
+        description: "Indicamos cortes, sugerimos produtos e ajudamos a montar compras e encomendas com proximidade.",
+        highlight: "Humano",
+        metric: "contato direto e facil com a loja",
       },
       {
-        icon: "🕐",
-        tag: "Durabilidade",
-        title: "Vida Útil Estendida",
-        description: "Manutenção preventiva estende a vida do seu veículo em anos.",
-        highlight: "+5",
-        metric: "anos",
+        icon: "🍝",
+        tag: "Variedade",
+        title: "Mais opcoes para o seu dia",
+        description: "Do basico ao especial, a loja combina despensa, cafe da manha, refeicoes prontas e presentes.",
+        highlight: "Completo",
+        metric: "mix pensado para varias necessidades",
       },
       {
-        icon: "🎯",
-        tag: "Confiança",
-        title: "Garantia Total",
-        description: "Todos os reparos com garantia de 12 meses e suporte completo.",
-        highlight: "12",
-        metric: "meses",
+        icon: "🎁",
+        tag: "Encomendas",
+        title: "Facilidade para datas especiais",
+        description: "Montamos cestas, separamos itens e organizamos encomendas para presentear ou receber em casa.",
+        highlight: "Sob medida",
+        metric: "para ocasioes especiais e pedidos planejados",
       },
       {
-        icon: "🏆",
-        tag: "Qualidade",
-        title: "Valor de Revenda",
-        description: "Manutenção completa preserva o valor de seu veículo no mercado.",
-        highlight: "+15%",
-        metric: "valor",
+        icon: "🏡",
+        tag: "Bairro",
+        title: "A praticidade de ter tudo perto",
+        description: "Voce conta com uma loja de confianca na regiao, pronta para atender bem em qualquer dia da semana.",
+        highlight: "Pertinho",
+        metric: "da sua rotina e com atendimento local",
       },
     ],
   },
 
   testimonials: {
-    title: "O que dizem nossos clientes",
-    subtitle: "Experiências reais de quem confia na AutoCenter Pro",
+    title: "Quem compra aqui percebe a diferenca",
+    subtitle:
+      "Depoimentos de clientes que valorizam qualidade, praticidade e um atendimento atencioso no dia a dia.",
     items: [
       {
-        name: "Carlos Mendes",
-        role: "Empresário",
-        text: "Levo meu carro na AutoCenter há 5 anos. Atendimento impecável, profissionalismo de ponta e preço justo. Recomendo a todos os meus amigos!",
+        name: "Marina Costa",
+        role: "Cliente do bairro",
+        text: "O hortifruti sempre me surpreende pela qualidade e o atendimento no WhatsApp ajuda muito quando a semana fica corrida.",
         rating: 5,
       },
       {
-        name: "Juliana Silva",
-        role: "Advogada",
-        text: "Estava preocupada com o barulho estranho do motor. Fizeram diagnóstico rápido e resolveram perfeitamente. Muito atencioso com o carro!",
+        name: "Rafael Nogueira",
+        role: "Morador da regiao",
+        text: "Virou meu mercado de confianca. Consigo resolver compra da semana, pegar pao fresco e ainda fazer encomenda para o churrasco.",
         rating: 5,
       },
       {
-        name: "Ricardo Santos",
-        role: "Professor",
-        text: "Agora faço manutenção preventiva regular aqui. O atendimento é excelente, explicam tudo e cobram justo. Virei cliente para a vida toda.",
+        name: "Patricia Almeida",
+        role: "Cliente frequente",
+        text: "Gosto muito do cuidado com os produtos e da variedade. A loja e organizada, bonita e sempre encontro algo especial para levar.",
+        rating: 5,
+      },
+      {
+        name: "Eduardo Matos",
+        role: "Cliente de delivery local",
+        text: "Quando peco pelo WhatsApp, vem tudo bem separado e fresquinho. E muito pratico para quem trabalha o dia inteiro.",
+        rating: 5,
+      },
+      {
+        name: "Camila Rezende",
+        role: "Vizinha e cliente da padaria",
+        text: "Os paes e doces sao excelentes, mas o que mais me fideliza e a atencao da equipe. Sempre me atendem super bem.",
+        rating: 5,
+      },
+      {
+        name: "Thiago Barros",
+        role: "Cliente de encomendas",
+        text: "Ja pedi cesta, frios e itens para receber amigos em casa. Foi tudo separado com capricho e muita facilidade no atendimento.",
         rating: 5,
       },
     ],
   },
 
   faq: {
-    title: "Perguntas Frequentes",
-    subtitle: "Tire suas dúvidas sobre nossos serviços automotivos",
+    title: "Perguntas frequentes",
+    subtitle: "As duvidas mais comuns de quem compra na loja, faz pedido pelo WhatsApp ou quer encomendar itens especiais.",
     items: [
       {
-        question: "Com qual frequência devo fazer revisão?",
-        answer: "Recomendamos revisão a cada 10.000 km ou a cada 6 meses, o que ocorrer primeiro. Verifique o manual do seu veículo.",
+        question: "Voces fazem entrega?",
+        answer:
+          "Sim. Atendemos uma area local com delivery rapido para pedidos confirmados durante o horario de funcionamento da loja.",
       },
       {
-        question: "Os reparos têm garantia?",
-        answer: "Sim! Todos os serviços realizados possuem garantia de 12 meses contra defeitos de execução.",
+        question: "Posso fazer pedido pelo WhatsApp?",
+        answer:
+          "Sim. Voce pode enviar sua lista, pedir informacoes sobre disponibilidade, reservar itens e combinar retirada ou entrega.",
       },
       {
-        question: "Vocês usam peças originais?",
-        answer: "Sim. Utilizamos exclusivamente peças originais das marcas automotivas e confiáveis. Qualidade garantida.",
+        question: "Voces aceitam encomendas para datas especiais?",
+        answer:
+          "Aceitamos sim. Montamos cestas, separamos frios, padaria, carnes e outros itens para eventos, presentes e reunioes em familia.",
       },
       {
-        question: "Vocês fazem atendimento em domicílio?",
-        answer: "Sim. Para pequenos reparos e diagnósticos. Consulte-nos sobre a possibilidade e valores de deslocamento.",
+        question: "Quais formas de pagamento voces aceitam?",
+        answer:
+          "Trabalhamos com as principais formas de pagamento. No atendimento pelo WhatsApp informamos as opcoes disponiveis para retirada ou entrega.",
       },
       {
-        question: "Como funciona o orçamento?",
-        answer: "Fazemos diagnóstico completo, apresentamos orçamento claro com todos os itens. Você aprova antes de iniciarmos.",
+        question: "A loja tem produtos para o dia a dia e itens mais especiais?",
+        answer:
+          "Sim. Nosso mix foi pensado justamente para equilibrar praticidade da rotina com produtos diferenciados para momentos especiais.",
+      },
+      {
+        question: "Como faco para falar com a loja?",
+        answer:
+          "Voce pode usar qualquer botao de WhatsApp da pagina e falar direto com a nossa equipe para pedir, reservar ou tirar duvidas.",
       },
     ],
   },
 
   cta: {
-    title: "Seu Veículo Merece Cuidado Profissional",
-    subtitle: "Agende agora sua revisão e receba atendimento de qualidade de profissionais especializados",
-    button: "Agendar Revisão",
-    buttonSecondary: "Orçamento Grátis",
-    note: "⏱️ Resposta em até 15 minutos | Atendimento personalizado",
+    title: "Faca sua compra com mais praticidade e o cuidado de uma loja de confianca",
+    subtitle:
+      "Chame no WhatsApp para pedir, encomendar ou tirar uma duvida sobre produtos, entregas e disponibilidade.",
+    button: "Pedir pelo WhatsApp",
+    buttonSecondary: "Enviar mensagem",
+    note: "Atendimento em horario comercial | Retirada na loja e entrega local sob consulta",
   },
 
   footer: {
-    tagline: "Excelência em manutenção automotiva desde 2004",
+    tagline: "Um mercado de bairro completo, com produtos frescos, atendimento proximo e praticidade para a sua rotina.",
     sections: [
       {
-        title: "Serviços",
+        title: "Setores",
         links: [
-          "Revisão Completa",
-          "Reparo de Motor",
-          "Sistema de Freios",
-          "Pneus e Rodas",
+          "Hortifruti Selecionado",
+          "Padaria e Confeitaria",
+          "Acougue e Proteinas",
+          "Mercearia e Itens Especiais",
         ],
       },
       {
-        title: "Empresa",
+        title: "Facilidades",
         links: [
-          "Sobre Nós",
-          "Nossa Equipe",
-          "Certificações",
+          "Rotisseria",
+          "Pedidos pelo WhatsApp",
+          "Encomendas",
+          "Entrega Local",
         ],
       },
       {
         title: "Contato",
         links: [
-          "WhatsApp",
-          "Telefone",
-          "Endereço",
+          "Fazer Pedido",
+          "Falar com a Loja",
+          "Retirada e Delivery",
         ],
       },
     ],
-    copyright: "© 2024 AutoCenter Pro - Todos os direitos reservados",
-    whatsappLabel: "Agendamento e suporte via WhatsApp",
+    copyright: "© 2026 Emporio Sabor da Vila - Todos os direitos reservados.",
+    whatsappLabel: "Fale com a nossa equipe pelo WhatsApp",
   },
 };

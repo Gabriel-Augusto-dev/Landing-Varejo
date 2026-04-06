@@ -3,19 +3,19 @@
 @layer base {
   :root {
     /* ===== CORES PRINCIPAIS (theme.colors) ===== */
-    --primary: 96 165 250;
-    --secondary: 255 255 255;
-    --accent: 191 219 254;
-    --success: 34 197 94;
-    --warning: 251 191 36;
+    --primary: 245 158 11;
+    --secondary: 249 115 22;
+    --accent: 252 211 77;
+    --success: 234 88 12;
+    --warning: 250 204 21;
     --error: 239 68 68;
     
     /* ===== BACKGROUNDS (theme.backgrounds) ===== */
-    --bg-main: 10 15 25;
-    --bg-card: 30 45 70;
-    --bg-hover: 40 60 95;
-    --bg-alternate: 15 22 35;
-    --bg-light: 50 70 110;
+    --bg-main: 7 11 22;
+    --bg-card: 15 23 42;
+    --bg-hover: 30 41 59;
+    --bg-alternate: 10 16 30;
+    --bg-light: 243 244 246;
     
     /* ===== TEXTOS (theme.text) ===== */
     --text-primary: 255 255 255;
@@ -25,15 +25,15 @@
     --text-inverted: 15 23 42;
     
     /* ===== BORDAS (theme.borders) ===== */
-    --border-default: 60 85 130;
-    --border-light: 80 110 170;
-    --border-dark: 40 60 95;
-    --border-focus: 59 130 246;
+    --border-default: 51 65 85;
+    --border-light: 100 116 139;
+    --border-dark: 30 41 59;
+    --border-focus: 245 158 11;
     
     /* ===== ALIASES PARA COMPATIBILIDADE ===== */
-    --bg: 10 15 25;
-    --bg-dark: 10 15 25;
-    --border: 60 85 130;
+    --bg: 7 11 22;
+    --bg-dark: 7 11 22;
+    --border: 51 65 85;
   }
 
   * {
@@ -48,9 +48,49 @@
     margin: 0;
     padding: 0;
     background-color: rgb(var(--bg-main));
+    background-image:
+      radial-gradient(circle at top left, rgb(var(--secondary) / 0.12), transparent 28%),
+      radial-gradient(circle at 85% 15%, rgb(var(--primary) / 0.12), transparent 22%),
+      linear-gradient(180deg, rgb(var(--bg-main)) 0%, rgb(var(--bg-alternate)) 100%);
     color: rgb(var(--text-primary));
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  img,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background-color: rgb(var(--secondary) / 0.25);
+    color: rgb(var(--text-primary));
+  }
+
+  section[id],
+  div[id] {
+    scroll-margin-top: 6rem;
   }
 }
 
@@ -257,7 +297,7 @@
   /* Container responsivo */
   .container {
     width: 100%;
-    max-width: 80rem;
+    max-width: 86rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;

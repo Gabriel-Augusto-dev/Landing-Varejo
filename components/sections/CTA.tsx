@@ -35,7 +35,7 @@ export function CtaSplit() {
                 <Button
                   variant="outline"
                   size="lg"
-                  href={getWhatsAppUrl()}
+                  href="#contato"
                   className="w-full sm:w-auto"
                 >
                   {content.cta.buttonSecondary}

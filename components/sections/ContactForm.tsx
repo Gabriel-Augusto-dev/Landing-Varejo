@@ -1,196 +1,124 @@
 "use client";
 
-import { useState } from "react";
+import { content } from "@/config/content";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { Container } from "@/ui/Container";
 import { Section } from "@/ui/Section";
 import { SectionHeader } from "@/ui/SectionHeader";
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  service: string;
-}
+const quickActions = [
+  {
+    title: "Fazer pedido",
+    description: "Envie sua lista e fale direto com a loja.",
+    label: "Pedir agora",
+    message: "Olá! Quero fazer um pedido no Emporio Sabor da Vila.",
+  },
+  {
+    title: "Encomendar itens especiais",
+    description: "Reserve carnes, cestas, padaria ou itens para eventos.",
+    label: "Quero encomendar",
+    message: "Olá! Quero fazer uma encomenda especial no Emporio Sabor da Vila.",
+  },
+  {
+    title: "Consultar entrega",
+    description: "Veja disponibilidade, região atendida e prazo do delivery local.",
+    label: "Ver delivery",
+    message: "Olá! Quero saber sobre entrega e delivery do Emporio Sabor da Vila.",
+  },
+];
+
+const infoCards = [
+  {
+    title: "Atendimento rápido",
+    text: "Resposta em horário comercial para pedidos, reservas e dúvidas.",
+  },
+  {
+    title: "Retirada ou entrega",
+    text: "Você escolhe a forma mais prática para receber sua compra.",
+  },
+  {
+    title: "Atendimento da loja",
+    text: "Contato direto com a equipe, sem formulário e sem complicação.",
+  },
+];
 
 export function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    service: "",
-  });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-
-    try {
-      // Validações
-      if (!formData.name || !formData.email || !formData.phone) {
-        throw new Error("Preencha todos os campos obrigatórios");
-      }
-
-      // Aqui você pode enviar para um backend
-      // Por enquanto, vamos usar WhatsApp
-      const message = `Olá! Meu nome é ${formData.name}\n\nEmail: ${formData.email}\nTelefone: ${formData.phone}\nServiço: ${formData.service}\n\nMensagem: ${formData.message}`;
-      const whatsappUrl = getWhatsAppUrl(message);
-
-      // Abrir WhatsApp em nova aba
-      window.open(whatsappUrl, "_blank");
-
-      // Limpar form
-      setFormData({ name: "", email: "", phone: "", message: "", service: "" });
-      setStatus("success");
-
-      // Reset status após 3s
-      setTimeout(() => setStatus("idle"), 3000);
-    } catch {
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 3000);
-    }
-  };
-
   return (
     <Section id="contato" background="dark" padding="lg">
-      <Container size="md">
+      <Container size="lg">
         <SectionHeader
-          badge="Entre em Contato"
-          badgeIcon="📧"
-          title="Vamos conversar sobre seu projeto"
-          subtitle="Preencha o formulário abaixo e entraremos em contato em breve"
+          badge="WhatsApp Direto"
+          badgeIcon="📲"
+          title="Fale com a nossa loja agora mesmo"
+          subtitle="O foco aqui é simples: chamar no WhatsApp e resolver seu pedido com rapidez."
           align="center"
         />
 
-        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {/* Name */}
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
-                Nome Completo *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:border-theme-primary/50 text-white placeholder-slate-500 transition-colors"
-                placeholder="Seu nome"
-              />
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-3xl border border-slate-700 bg-slate-900/60 p-6 sm:p-8">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-white sm:text-3xl">
+                Atendimento direto pelo WhatsApp
+              </h3>
+              <p className="mt-3 text-slate-400">
+                Chame para pedir produtos, reservar itens, consultar entrega ou fazer encomendas.
+              </p>
             </div>
 
-            {/* Email */}
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
-                Email *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:border-theme-primary/50 text-white placeholder-slate-500 transition-colors"
-                placeholder="seu@email.com"
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {/* Phone */}
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-slate-200 mb-2">
-                Telefone/WhatsApp *
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:border-theme-primary/50 text-white placeholder-slate-500 transition-colors"
-                placeholder="(11) 98765-4321"
-              />
+            <div className="grid gap-4">
+              {quickActions.map((action) => (
+                <a
+                  key={action.title}
+                  href={getWhatsAppUrl(action.message)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-2xl border border-slate-700 bg-slate-800/60 p-5 transition-all hover:border-theme-primary hover:bg-slate-800"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-lg font-semibold text-white">{action.title}</p>
+                      <p className="mt-2 text-sm text-slate-400">{action.description}</p>
+                    </div>
+                    <span className="rounded-full bg-theme-primary/15 px-3 py-1 text-xs font-semibold text-theme-primary">
+                      {action.label}
+                    </span>
+                  </div>
+                </a>
+              ))}
             </div>
 
-            {/* Service */}
-            <div>
-              <label htmlFor="service" className="block text-sm font-medium text-slate-200 mb-2">
-                Serviço de Interesse
-              </label>
-              <select
-                id="service"
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:border-theme-primary/50 text-white placeholder-slate-500 transition-colors"
-              >
-                <option value="">Selecione um serviço</option>
-                <option value="revisao">Revisão Completa</option>
-                <option value="manutencao">Manutenção Preventiva</option>
-                <option value="alinhamento">Alinhamento e Balanceamento</option>
-                <option value="eletrica">Sistema Elétrico</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Message */}
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
-              Mensagem
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows={4}
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:outline-none focus:border-theme-primary/50 text-white placeholder-slate-500 transition-colors resize-none"
-              placeholder="Conte-nos mais sobre seu projeto..."
-            />
-          </div>
-
-          {/* Status Message */}
-          {status === "success" && (
-            <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-400 rounded-lg text-sm">
-              ✓ Formulário enviado! Você será redirecionado para o WhatsApp.
-            </div>
-          )}
-          {status === "error" && (
-            <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-lg text-sm">
-              ✗ Erro ao enviar. Verifique os campos obrigatórios.
-            </div>
-          )}
-
-          {/* Submit Button */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="px-6 py-3 lg:px-8 lg:py-4 gradient-primary text-slate-950 font-bold rounded-lg lg:rounded-xl hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+            <a
+              href={getWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-2xl gradient-primary px-6 py-4 text-base font-bold text-slate-950 transition-transform hover:scale-[1.01]"
             >
-              {status === "loading" ? "Enviando..." : "Enviar Mensagem"}
-            </button>
-            <p className="text-xs sm:text-sm text-slate-400 flex items-center">
-              ⏱️ Você será redirecionado para WhatsApp para resposta rápida
-            </p>
+              {content.cta.button}
+            </a>
           </div>
-        </form>
+
+          <div className="space-y-4">
+            {infoCards.map((card) => (
+              <div
+                key={card.title}
+                className="rounded-2xl border border-slate-700 bg-slate-900/50 p-5 sm:p-6"
+              >
+                <h4 className="text-lg font-semibold text-white">{card.title}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">{card.text}</p>
+              </div>
+            ))}
+
+            <div className="rounded-2xl border border-theme-primary/30 bg-theme-primary/10 p-5 sm:p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-theme-primary">
+                Loja
+              </p>
+              <p className="mt-3 text-xl font-bold text-white">{content.navbar.brand}</p>
+              <p className="mt-2 text-sm text-slate-300">
+                Mercado de bairro com foco em praticidade, frescor e atendimento próximo.
+              </p>
+            </div>
+          </div>
+        </div>
       </Container>
     </Section>
   );
